@@ -17,7 +17,6 @@ function generateGrid() {
         gridSize = Number(prompt("What size grid? [MAX: 100]"));
         
         if (gridSize == null) return;
-
     } while (isNaN(gridSize) || gridSize > 100);
 
     for (let i = 0; i < gridSize; ++i) {
