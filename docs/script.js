@@ -14,9 +14,11 @@ function generateGrid() {
 
     let gridSize = 0;
     do {
-        gridSize = Number(prompt("What size grid?"));
+        gridSize = Number(prompt("What size grid? [MAX: 100]"));
+        
         if (gridSize == null) return;
-    } while (isNaN(gridSize));
+
+    } while (isNaN(gridSize) || gridSize > 100);
 
     for (let i = 0; i < gridSize; ++i) {
         const row = document.createElement("div");
