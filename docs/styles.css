@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+.new {
+    display: block;
+    margin: 16px auto;
+    padding: 8px;
+}
+
 .container {
     max-width: 90vh;
     max-height: 90vh;
