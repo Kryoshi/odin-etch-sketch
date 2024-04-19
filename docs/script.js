@@ -1,10 +1,23 @@
 const grid = document.querySelector(".grid");
+const newGridButton = document.querySelector(".new");
 
-
-let gridSize = 64;
+function deleteGrid() {
+    do {
+        grid.removeChild(grid.lastChild);
+    } while (grid.hasChildNodes());
+}
 
 function generateGrid() {
-    const size = grid.clientWidth / gridSize;
+    if (grid.hasChildNodes()) {
+        deleteGrid();
+    }
+
+    let gridSize = 0;
+    do {
+        gridSize = Number(prompt("What size grid?"));
+        if (gridSize == null) return;
+    } while (isNaN(gridSize));
+
     for (let i = 0; i < gridSize; ++i) {
         const row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -20,9 +33,8 @@ function generateGrid() {
         if (currentOpacity < 1) {
             currentOpacity += 0.1;
             e.target.setAttribute("style", `opacity: ${currentOpacity};`)
-            console.log(currentOpacity);
         }
     });
 }
 
-generateGrid()
+newGridButton.addEventListener("click", generateGrid);
