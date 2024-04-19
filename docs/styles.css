@@ -1,6 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90vh;
+    max-height: 90vh;
+    padding: 64px 32px;
+    margin: auto;
+}
+
 .grid {
-    width: 960px;
-    height: 960px;
+    aspect-ratio: 1;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+.square {
+    min-width: 40px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 1px solid black;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
