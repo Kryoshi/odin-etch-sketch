@@ -12,7 +12,7 @@
 .container {
     max-width: 90vh;
     max-height: 90vh;
-    padding: 2vh;
+    padding: 0 2vh;
     margin: auto;
 }
 

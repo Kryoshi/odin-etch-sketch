@@ -30,10 +30,12 @@ function generateGrid() {
         }
     }
     grid.addEventListener("mouseover", function (e) {
-        let currentOpacity = Number(e.target.style.opacity);
-        if (currentOpacity < 1) {
-            currentOpacity += 0.1;
-            e.target.setAttribute("style", `opacity: ${currentOpacity};`)
+        if (e.target.className === "square") {
+            let currentOpacity = Number(e.target.style.opacity);
+            if (currentOpacity < 1) {
+                currentOpacity += 0.1;
+                e.target.setAttribute("style", `opacity: ${currentOpacity};`)
+            }
         }
     });
 }
