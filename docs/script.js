@@ -1,11 +1,10 @@
 const grid = document.querySelector(".grid");
 
 
-let gridSize = 16;
+let gridSize = 64;
 
 function generateGrid() {
     const size = grid.clientWidth / gridSize;
-    console.log(grid.clientWidth);
     for (let i = 0; i < gridSize; ++i) {
         const row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -16,6 +15,14 @@ function generateGrid() {
             row.appendChild(square);
         }
     }
+    grid.addEventListener("mouseover", function (e) {
+        let currentOpacity = Number(e.target.style.opacity);
+        if (currentOpacity < 1) {
+            currentOpacity += 0.1;
+            e.target.setAttribute("style", `opacity: ${currentOpacity};`)
+            console.log(currentOpacity);
+        }
+    });
 }
 
 generateGrid()
