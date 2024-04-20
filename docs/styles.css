@@ -21,7 +21,7 @@
     max-width: 100%;
     max-height: 100%;
     display: flex;
-    border: 1px solid black
+    border: 1px solid black;
 }
 
 .row {
@@ -35,6 +35,5 @@
     box-sizing: border-box;
     border: 1px solid black;
     flex-grow: 1;
-    background-color: black;
-    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
